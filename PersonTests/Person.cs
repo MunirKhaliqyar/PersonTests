@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
-    public class Person
+    public class Person : IMeasurable, IResettable
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
@@ -20,6 +20,9 @@
         /// </summary>
         public virtual string Name { get; set; }
 
+
+        public int Size { get; }
+
         /// <summary>
         /// Returns a string that represents the person.
         /// </summary>
@@ -27,6 +30,11 @@
         public override string ToString()
         {
             return this.Name;
+        }
+
+        public void Reset()
+        {
+            Name = String.Empty;
         }
     }
 }
