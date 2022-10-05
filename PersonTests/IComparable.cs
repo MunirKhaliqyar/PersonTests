@@ -8,6 +8,6 @@ namespace PersonTests
 {
     internal interface IComparable<Person>
     {
-        int CompareTo(Person person);
+        public int CompareTo(Person person);
     }
 }
