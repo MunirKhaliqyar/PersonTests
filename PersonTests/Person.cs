@@ -5,6 +5,8 @@
     /// </summary>
     public class Person : IMeasurable, IResettable
     {
+        private int _size;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Person"/> class.
         /// Constructor for a person optionally adding their name.
@@ -13,6 +15,7 @@
         public Person(string name = "")
         {
             this.Name = name.Trim();
+            _size = GetTheNameSize(name);
         }
 
         /// <summary>
@@ -21,7 +24,7 @@
         public virtual string Name { get; set; }
 
 
-        public int Size { get; }
+        public int Size { get { return _size; } }
 
         /// <summary>
         /// Returns a string that represents the person.
@@ -35,6 +38,11 @@
         public void Reset()
         {
             Name = String.Empty;
+        }
+
+        private int GetTheNameSize(string name)
+        {
+            return name.Length;
         }
     }
 }
