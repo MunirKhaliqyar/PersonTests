@@ -44,20 +44,20 @@ namespace PersonTests
             }
         }
 
-        //private static int TestCompare()
-        //{
-        //    Person firstPerson = new ("Alice");
-        //    Person secondPerson = new ("Bob");
-        //    if (firstPerson.CompareTo(secondPerson) < 0)
-        //    {
-        //        return 0;
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("TestCompare failed!");
-        //        return 1;
-        //    }
-        //}
+        private static int TestCompare()
+        {
+            Person firstPerson = new("Alice");
+            Person secondPerson = new("Bob");
+            if (firstPerson.CompareTo(secondPerson) < 0)
+            {
+                return 0;
+            }
+            else
+            {
+                MessageBox.Show("TestCompare failed!");
+                return 1;
+            }
+        }
 
         //private static int TestDisplay()
         //{
@@ -79,10 +79,17 @@ namespace PersonTests
             this.failedTests = 0;
 
             // Run feature tests here
+<<<<<<< HEAD
             // this.failedTests += TestDisplay();
             // this.failedTests += TestCompare();
              this.failedTests += TestReset();
              this.failedTests += TestSize();
+=======
+            //this.failedTests += TestDisplay();
+            this.failedTests += TestCompare();
+            // this.failedTests += TestReset();
+            // this.failedTests += TestSize();
+>>>>>>> feature/IComparable
             MessageBox.Show(this.failedTests.ToString() + " of 4 tests failed!");
         }
     }

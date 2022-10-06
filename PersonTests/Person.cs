@@ -3,7 +3,11 @@
     /// <summary>
     /// Represents one person saving their name.
     /// </summary>
+<<<<<<< HEAD
     public class Person : IMeasurable, IResettable
+=======
+    public class Person : IDisplayable, IComparable<Person>
+>>>>>>> feature/IComparable
     {
         private int _size;
 
@@ -35,6 +39,7 @@
             return this.Name;
         }
 
+<<<<<<< HEAD
         public void Reset()
         {
             Name = String.Empty;
@@ -43,6 +48,24 @@
         private int GetTheNameSize(string name)
         {
             return name.Length;
+=======
+        public void Display()
+        {
+            MessageBox.Show(this.Name);
+        }
+
+        public int CompareTo(Person person)
+        {
+
+            if(person.Name == this.Name)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
+>>>>>>> feature/IComparable
         }
     }
 }
