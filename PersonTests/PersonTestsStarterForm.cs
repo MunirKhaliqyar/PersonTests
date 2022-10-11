@@ -59,37 +59,31 @@ namespace PersonTests
             }
         }
 
-        //private static int TestDisplay()
-        //{
-        //    try
-        //    {
-        //        new Person("Bob").Display();
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("TestDisplay failed!");
-        //        return 1;
-        //    }
+        private static int TestDisplay()
+        {
+            try
+            {
+                new Person("Bob").Display();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("TestDisplay failed!");
+                return 1;
+            }
 
-        //    return 0;
-        //}
+            return 0;
+        }
 
         private void RunTestsButton_Click(object sender, EventArgs e)
         {
             this.failedTests = 0;
 
             // Run feature tests here
-<<<<<<< HEAD
-            // this.failedTests += TestDisplay();
-            // this.failedTests += TestCompare();
-             this.failedTests += TestReset();
-             this.failedTests += TestSize();
-=======
-            //this.failedTests += TestDisplay();
+            this.failedTests += TestDisplay();
+            this.failedTests += TestReset();
             this.failedTests += TestCompare();
-            // this.failedTests += TestReset();
-            // this.failedTests += TestSize();
->>>>>>> feature/IComparable
+            this.failedTests += TestSize();
+
             MessageBox.Show(this.failedTests.ToString() + " of 4 tests failed!");
         }
     }

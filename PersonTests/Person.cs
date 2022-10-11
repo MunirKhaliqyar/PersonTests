@@ -2,13 +2,12 @@
 {
     /// <summary>
     /// Represents one person saving their name.
-    /// </summary>
-<<<<<<< HEAD
-    public class Person : IMeasurable, IResettable
-=======
-    public class Person : IDisplayable, IComparable<Person>
->>>>>>> feature/IComparable
+    /// </summary
+    public class Person : IMeasurable, IResettable, IDisplayable, IComparable<Person>
     {
+        /// <summary>
+        /// This field holds the size of the student name.
+        /// </summary>
         private int _size;
 
         /// <summary>
@@ -28,6 +27,9 @@
         public virtual string Name { get; set; }
 
 
+        /// <summary>
+        /// This property holds the size of student name and it's read only.
+        /// </summary>
         public int Size { get { return _size; } }
 
         /// <summary>
@@ -39,7 +41,6 @@
             return this.Name;
         }
 
-<<<<<<< HEAD
         public void Reset()
         {
             Name = String.Empty;
@@ -48,7 +49,8 @@
         private int GetTheNameSize(string name)
         {
             return name.Length;
-=======
+        }
+
         public void Display()
         {
             MessageBox.Show(this.Name);
@@ -65,7 +67,6 @@
             {
                 return -1;
             }
->>>>>>> feature/IComparable
         }
     }
 }
